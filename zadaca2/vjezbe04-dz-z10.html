@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+   function ispisiRandomBrojeve(prviBroj, drugiBroj) {
+  if (typeof prviBroj !== 'number' || typeof drugiBroj !== 'number') {
+    console.error('Ulazni argumenti moraju biti brojevi.');
+    return;
+  }
+
+  
+  if (prviBroj > drugiBroj) {
+    [prviBroj, drugiBroj] = [drugiBroj, prviBroj]; 
+  }
+
+  
+  for (let i = 0; i < 5; i++) {
+    const randomBroj = Math.floor(Math.random() * (drugiBroj - prviBroj + 1)) + prviBroj;
+    console.log(randomBroj);
+  }
+}
+ispisiRandomBrojeve(1, 10);
+ </script>
+</body>
+</html>

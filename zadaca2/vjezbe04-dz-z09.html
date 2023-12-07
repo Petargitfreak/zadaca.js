@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+ function savrsenbroj(n) {
+  let sum = 0;
+  for (let i = 1; i < n; i++) {
+    if (n % i === 0) {
+      sum += i;
+    }
+  }
+  return sum === n;
+}
+
+function savrsenibrojevido(n) {
+  for (let i = 1; i <= n; i++) {
+    if (issavrsenBroj(i)) {
+      console.log(i);
+    }
+  }
+}
+savrsenibrojevido(1000);
+ </script>
+</body>
+</html>
